@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 80%;
+  gap: 3em;
+  margin-top: 5rem;
+}
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+input {
+  padding: 1em;
+}
+input[type="submit"] {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: #52ad1c;
+  position: relative;
+  border: none;
+  margin-top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 10px;
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-image: linear-gradient(45deg, #3245ac, #90823a, #00342a);
+}
+.preloader {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+}
+.spin1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  //   inset: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 2px;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  &::after {
+    inset: 5px;
+    z-index: 11;
+    content: "";
+    background: #000;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .sp1 {
+    width: 500px;
+    position: absolute;
+    height: 100px;
+    background-image: linear-gradient(to left,#671aef,#014eac);
+    left: -150px;
+    top: 30px;
+    z-index: -122;
+    animation: ford 3s linear infinite;
+  }
+}
+
+.spin2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  // inset: 10px;
+  overflow: hidden;
+  display: grid;
+  z-index: 444;
+  place-content: center;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+//   background: #8312ac;
+  border-radius: 50%;
+
+
+  &::after{
+    content: "";
+    width: 93%;
+    height: 93%;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+  .sp2 {
+    height: 50px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 110px;
+    background-color: #90823a;
+    animation: back 1s linear infinite;
+  }
+}
+
+
+
+@keyframes back {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+@keyframes ford {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
